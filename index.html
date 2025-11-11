@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robotlar</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sürücü Adayı Macerası - Trafik Oyunu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Menü Butonu -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
+    <header>
+        <h1>🚦 Sürücü Adayı Macerası</h1>
+    </header>
 
-  <!-- Sol Menü -->
-  <div class="sidebar" id="sidebar">
-    <a href="#" onclick="showTopic('oryantasyon')">Oryantasyon</a>
-    <a href="#" onclick="showTopic('buzkirma')">Buz Kırma</a>
-    <a href="#" onclick="showTopic('konu1')">Konu 1: </a>
-    <a href="#" onclick="showTopic('konu2')">Konu 2: </a>
-    <a href="#" onclick="showTopic('video')">Video</a>
-    <a href="#" onclick="showTopic('etkinlik')">Etkinlik</a>
-  </div>
+    <div id="game-container">
+        <div id="score-board">
+            Puan: <span id="current-score">0</span> | Seviye: <span id="current-level">1</span>
+            <button id="info-button" class="action-button">📚 Kavşak Kılavuzu</button>
+        </div>
 
-  <!-- İçerik Alanı -->
-  <div class="content" id="content">
-    <!-- Evsel Atıklar -->
-    <section id="konu1" class="topic">
-      <h2>robot Nedir?</h2>
-      <p>Robotların tarihsel gelişimi.</p>
-    </section>
+        <div id="game-area">
+            <h2>Başlamak İçin Hazır mısınız?</h2>
+            <button id="start-button" class="primary-button">Maceraya Başla</button>
+        </div>
 
-    <!-- Oryantasyon -->
-    <section id="oryantasyon" class="topic" style="display:none;">
-      <h2>Oryantasyon</h2>
-      <p>Oryantasyon içeriği buraya gelecek.</p>
-    </section>
-    
-    <!-- Diğer içerikler buraya eklenebilir. -->
-  </div>
+        <div id="leaderboard-section">
+            <h3>🏆 Liderler</h3>
+            <ul id="leader-list">
+                </ul>
+        </div>
+    </div>
 
-  <!-- Chatbot -->
-  <script src="//code.tidio.co/ploznuho6redpvx0yuno3a6tb7free7r.js" async></script>
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h4 id="info-title">Genel Bilgiler</h4>
+            <p id="info-text">Trafik kuralları hayat kurtarır...</p>
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
