@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotlar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Menü Butonu -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
+
+  <!-- Sol Menü -->
+  <div class="sidebar" id="sidebar">
+    <a href="#" onclick="showTopic('oryantasyon')">Oryantasyon</a>
+    <a href="#" onclick="showTopic('buzkirma')">Buz Kırma</a>
+    <a href="#" onclick="showTopic('konu1')">Konu 1: </a>
+    <a href="#" onclick="showTopic('konu2')">Konu 2: </a>
+    <a href="#" onclick="showTopic('video')">Video</a>
+    <a href="#" onclick="showTopic('etkinlik')">Etkinlik</a>
+  </div>
+
+  <!-- İçerik Alanı -->
+  <div class="content" id="content">
+    <!-- Evsel Atıklar -->
+    <section id="konu1" class="topic">
+      <h2>robot Nedir?</h2>
+      <p>Robotların tarihsel gelişimi.</p>
+    </section>
+
+    <!-- Oryantasyon -->
+    <section id="oryantasyon" class="topic" style="display:none;">
+      <h2>Oryantasyon</h2>
+      <p>Oryantasyon içeriği buraya gelecek.</p>
+    </section>
+    
+    <!-- Diğer içerikler buraya eklenebilir. -->
+  </div>
+
+  <!-- Chatbot -->
+  <script src="//code.tidio.co/ploznuho6redpvx0yuno3a6tb7free7r.js" async></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
